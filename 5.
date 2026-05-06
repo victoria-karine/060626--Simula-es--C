@@ -1,0 +1,19 @@
+
+#include <stdio.h> 
+
+int main () {
+int codigo;
+
+while (codigo >= 4)
+printf ("DIgite o codigo de acesso: ");
+scanf ("%d", &codigo);
+
+//Implemente aqui um WHILE
+//Enquanto codigo != 4321:
+//Exiba CODIGO INCORRETO
+//leia codigo novamente.
+
+    printf ("ACESSO LIBERADO");
+    
+    return 0; 
+}
