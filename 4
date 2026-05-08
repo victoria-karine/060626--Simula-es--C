@@ -1,18 +1,27 @@
+#include <stdio.h>
 
-#include <stdio.h> 
-int main () {
-  int i, status; 
-  int concluidas = 0, pendentes = 0;
-  
-  //Implemente aqui um FOR para repetir 8x
-  // Leia status.
-  //Se status == 1, incremento concluidas.
-  //Caso contrario, incremente pendentes.
-  
-  printf ("Concluidas: %d", concluidas );
-  prontf ("Pendentes: %d", pendentes);
-  
-  
-     return 0;
-     
+int main() {
+    int i, status;
+    int concluidas = 0, pendentes = 0;
+
+    // Implemente aqui um FOR para repetir 8 vezes.
+    // Leia status.
+    // Se status == 1, incremente concluidas.
+    // Caso contrario, incremente pendentes.
+
+    for (i = 1; i <= 8; i++) {
+        printf("Digite o status da atividade %d: ", i);
+        scanf("%d", &status);
+
+        if (status == 1) {
+            concluidas++;
+        } else {
+            pendentes++;
+        }
+    }
+
+    printf("Concluidas: %d\n", concluidas);
+    printf("Pendentes: %d\n", pendentes);
+
+    return 0;
 }
