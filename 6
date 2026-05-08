@@ -1,19 +1,39 @@
+#include <stdio.h>
 
-#include <stdio.h> 
+int main() {
+    int prioridade, continuar;
+    int baixa = 0, media = 0, alta = 0;
 
-int main () {
-int prioridade, continuar;
-int baixa = 0, int media= 0, int alta = 0;
+    // Implemente aqui um DO WHILE.
+    // Leia prioridade.
+    // Se prioridade == 1, conte baixa.
+    // Se prioridade == 2, conte media.
+    // Se prioridade == 3, conte alta.
+    // Senao, exiba PRIORIDADE INVALIDA.
+    // Depois pergunte se deseja continuar.
 
-// Implemente aqui DO WHILE
-// Leia prioridade.
-// Se prioridade == 1, conte baixa.
-// Se prioridade == 2, conte média.
-// Se prioridade == 3, conte alta.
-// Senao exiba PRIORIDADE INVALIDA
-printf (" Prioridade Baixa: %d", baixa);
-printf("Prioridade Média: %d", media);
-printf ("Prioridade Alta: %d", alta); 
+    do {
+        printf("Digite a prioridade do chamado: ");
+        scanf("%d", &prioridade);
 
-    return 0; 
+        if (prioridade == 1) {
+            baixa++;
+        } else if (prioridade == 2) {
+            media++;
+        } else if (prioridade == 3) {
+            alta++;
+        } else {
+            printf("PRIORIDADE INVALIDA\n");
+        }
+
+        printf("Deseja continuar? 1 - Sim / 0 - Nao: ");
+        scanf("%d", &continuar);
+
+    } while (continuar == 1);
+
+    printf("Baixa: %d\n", baixa);
+    printf("Media: %d\n", media);
+    printf("Alta: %d\n", alta);
+
+    return 0;
 }
