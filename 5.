@@ -1,19 +1,22 @@
+#include <stdio.h>
 
-#include <stdio.h> 
+int main() {
+    int codigo;
 
-int main () {
-int codigo;
+    printf("Digite o codigo de acesso: ");
+    scanf("%d", &codigo);
 
-while (codigo >= 4)
-printf ("DIgite o codigo de acesso: ");
-scanf ("%d", &codigo);
+    // Implemente aqui um WHILE.
+    // Enquanto codigo != 4321:
 
-//Implemente aqui um WHILE
-//Enquanto codigo != 4321:
-//Exiba CODIGO INCORRETO
-//leia codigo novamente.
+    while (codigo != 4321) {
+        printf("CODIGO INCORRETO\n");
 
-    printf ("ACESSO LIBERADO");
-    
-    return 0; 
+        printf("Digite o codigo de acesso: ");
+        scanf("%d", &codigo);
+    }
+
+    printf("ACESSO LIBERADO\n");
+
+    return 0;
 }
